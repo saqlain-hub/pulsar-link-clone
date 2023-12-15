@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-600;
+  }
+  a {
+    @apply text-blue-600;
+  }
+  .open h3 {
+    @apply font-bold text-[1.1rem] mt-2 text-white;
+  }
+  .open p {
+    @apply text-white;
+  }
+
+  .open div:not(:first-child) {
+    @apply border-t-[1px] py-2;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
