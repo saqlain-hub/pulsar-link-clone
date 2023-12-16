@@ -4,6 +4,7 @@ import user from "../assets/user.png";
 
 import { Link } from "react-router-dom";
 const Navbar = () => {
+  const someId = 78;
   return (
     <nav className="flex items-center justify-between w-full h-full p-2 bg-yellow-400 rounded-md">
       <Link to="/">
@@ -22,10 +23,11 @@ const Navbar = () => {
         </form>
       </div>
       <div className="flex items-center gap-2">
-        <Link to="/">
+        <Link to={`/user/${someId}/profile`}>
           <img src={user} alt="user icon" className="w-[30px]" />
         </Link>
-        <Link to="/">Saqlain Javed</Link>
+        <Link to={`/user/${someId}/profile`}>Saqlain Javed</Link>
+        <Link to={`/user/${someId}/profile`}>Logout</Link>
       </div>
     </nav>
   );

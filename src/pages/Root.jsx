@@ -1,17 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Dashboard from "../components/Dashboard";
-import UploadPost from "./UploadPost";
+import Navbar from "../components/Navbar";
 
 const Root = () => {
   return (
-    <>
-      <div className="w-full px-4 overflow-auto bg-gray-600 rounded-md">
-        <Dashboard />
-        <UploadPost />
+    <div className="relative">
+      <header className="sticky top-0 z-10 flex flex-col justify-center rounded-t-md">
+        <Navbar />
+      </header>
+      <div className="">
         <Outlet />
       </div>
-    </>
+    </div>
   );
 };
 

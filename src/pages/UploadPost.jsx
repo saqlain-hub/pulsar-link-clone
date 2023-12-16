@@ -2,8 +2,8 @@ import React from "react";
 
 const UploadPost = () => {
   return (
-    <div className="my-4">
-      <form>
+    <div className="m-4">
+      <form className="hidden xsm:flex flex-wrap ">
         <input type="text" placeholder="caption" />
         <input type="file" />
       </form>
