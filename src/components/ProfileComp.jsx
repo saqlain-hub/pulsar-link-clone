@@ -12,7 +12,7 @@ const ProfileComp = ({ open, setOpen }) => {
           src={userProfile}
           alt=""
         />
-        <h3 className={`${!open && "scale-0"} duration-300 origin-right`}>
+        <h3 className={`${!open && "scale-0"} duration-300 origin-left`}>
           Saqlain Javed
         </h3>
       </div>

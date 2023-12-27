@@ -5,7 +5,7 @@ import Interactions from "../components/Interactions";
 const Sidebar1 = ({ open, setOpen }) => {
   return (
     <main
-      className={`w-full p-3  duration-300 origin-left overflow-y-auto overflow-x-hidden`}
+      className={`w-full p-3 duration-300 origin-left overflow-y-auto overflow-x-hidden`}
     >
       <section className="mb-9">
         <ProfileComp open={open} setOpen={setOpen} />

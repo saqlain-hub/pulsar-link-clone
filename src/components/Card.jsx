@@ -8,6 +8,17 @@ const Card = ({ post }) => {
       <div>
         <img className="" src={post.img} alt="" />
       </div>
+      <div className="flex items-center gap-1 bg-red-300 mt-2">
+        <div className="rounded-md bg-blue-300 h-10 w-10 flex items-center justify-center hover:bg-red-500 cursor-pointer">
+          o
+        </div>
+        <div className="rounded-md bg-blue-300 h-10 w-10 flex items-center justify-center hover:bg-red-500 cursor-pointer">
+          o
+        </div>
+        <div className="rounded-md bg-blue-300 h-10 w-10 flex items-center justify-center hover:bg-red-500 cursor-pointer">
+          o
+        </div>
+      </div>
     </div>
   );
 };
