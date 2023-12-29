@@ -1,11 +1,12 @@
 import React from "react";
+import { TbDotsVertical } from "react-icons/tb";
 
 const PostOptions = () => {
   return (
     <div className="flex gap-1 flex-col items-center">
-      <div className="post-options"></div>
-      <div className="post-options"></div>
-      <div className="post-options"></div>
+      <p className="cursor-pointer text-2xl">
+        <TbDotsVertical />
+      </p>
     </div>
   );
 };
