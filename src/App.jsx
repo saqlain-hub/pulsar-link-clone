@@ -14,9 +14,14 @@ function App() {
   return (
     <>
       <Routes>
-        {!login && <Route path="/" element={<Login />} />}
+        {!login && (
+          <Route
+            path="/"
+            element={<Login setLogin={setLogin} login={login} />}
+          />
+        )}
         {login && (
-          <Route element={<Root />}>
+          <Route element={<Root setLogin={setLogin} login={login} />}>
             <Route element={<Layout />}>
               <Route path="/" element={<Homepage />} />
               <Route path="/posts" element={<Posts />} />

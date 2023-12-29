@@ -3,7 +3,10 @@ import logo from "/pulsar-link-logo.png";
 import user from "../assets/user.png";
 
 import { Link } from "react-router-dom";
-const Navbar = () => {
+const Navbar = ({ setLogin, login }) => {
+  const handleClick = () => {
+    setLogin(!login);
+  };
   const someId = 78;
   return (
     <nav className="flex items-center justify-between w-full h-full p-2 bg-yellow-400 rounded-b-md">
@@ -27,7 +30,7 @@ const Navbar = () => {
           <img src={user} alt="user icon" className="w-[30px]" />
         </Link>
         <Link to={`/user/${someId}/profile`}>Saqlain Javed</Link>
-        <Link to={`/user/${someId}/profile`}>Logout</Link>
+        <button onClick={handleClick}>Logout</button>
       </div>
     </nav>
   );
