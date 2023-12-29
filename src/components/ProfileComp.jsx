@@ -25,6 +25,7 @@ const ProfileComp = ({ open, setOpen }) => {
         <Link to={`/user/${someId}/profile`}>
           <p className="font-bold text-[1.3rem]">Saqlain Javed</p>
         </Link>
+        <p>@saqlain78</p>
         <p className="text-[1.2rem]">Mern Stack Developer</p>
       </div>
       <div className="hr-line">

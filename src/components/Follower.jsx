@@ -1,7 +1,7 @@
 import React from "react";
 
-const Follower = () => {
-  return <div>Follower</div>;
+const Follower = ({ follower }) => {
+  return <div>{follower}</div>;
 };
 
 export default Follower;

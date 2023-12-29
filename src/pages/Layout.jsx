@@ -13,10 +13,10 @@ const Layout = () => {
           <ProfileComp />
           <Followers />
         </aside>
-        <main className="md:px-0 bg-green-200">
+        <main className="md:px-0 ">
           <Outlet /> {/**Homepage */}
         </main>
-        <aside className="hidden max-h-[530px] overflow-auto xl:block sticky top-14 w-[20rem] bg-gray-200">
+        <aside className="hidden max-h-[530px] overflow-auto xl:block sticky top-14 bg-gray-200">
           {/* <Sidebar1 /> */}
         </aside>
       </div>

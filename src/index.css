@@ -43,8 +43,8 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 18rem auto 20rem;
-  gap: 1rem;
+  grid-template-columns: 20rem auto 20rem;
+  gap: 2rem;
 }
 
 .hr-line {
@@ -58,4 +58,19 @@
   width: 90%;
   background-color: red;
   height: 2px;
+}
+
+button {
+  background: orange;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+button:hover {
+  background: transparent;
+  color: black;
+  border-radius: 4px;
+  border: 2px solid orange;
 }

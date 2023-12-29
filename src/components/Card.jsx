@@ -1,8 +1,10 @@
 import React from "react";
+import User from "../components/User";
 
 const Card = ({ post }) => {
   return (
-    <div className="md:w-[480px] bg-white p-4 rounded-md">
+    <div className="p-2 rounded-md">
+      <User />
       <div>{post.title}</div>
       <div>{post.body}</div>
       <div>

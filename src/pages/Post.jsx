@@ -10,7 +10,7 @@ const Post = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex bg-white p-2 rounded-md flex-col items-center gap-4">
       {posts.map((post) => {
         return <Card key={post.id} post={post} />;
       })}
