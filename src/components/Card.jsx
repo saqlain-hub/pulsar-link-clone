@@ -1,11 +1,18 @@
 import React from "react";
 import User from "../components/User";
+import PostOptions from "./PostOptions";
 
 const Card = ({ post }) => {
   return (
-    <div className="p-2 rounded-md">
-      <User />
-      <div>{post.title}</div>
+    <div className="p-2 rounded-md overflow-hidden">
+      <div className="flex justify-between mb-4">
+        <div className="w-[90%]">
+          <User />
+        </div>
+        <div className="w-[10%]">
+          <PostOptions />
+        </div>
+      </div>
       <div>{post.body}</div>
       <div>
         <img className="" src={post.img} alt="" />

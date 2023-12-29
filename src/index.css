@@ -74,3 +74,11 @@ button:hover {
   border-radius: 4px;
   border: 2px solid orange;
 }
+
+.post-options {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: gray;
+  cursor: pointer;
+}
