@@ -40,3 +40,22 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 18rem auto 20rem;
+  gap: 1rem;
+}
+
+.hr-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.line {
+  width: 90%;
+  background-color: red;
+  height: 2px;
+}

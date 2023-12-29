@@ -9,7 +9,7 @@ const Root = () => {
         <Navbar />
       </header>
       <div className="">
-        <Outlet />
+        <Outlet /> {/** Layout */}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const someId = 78;
   return (
-    <nav className="flex items-center justify-between w-full h-full p-2 bg-yellow-400 rounded-md">
+    <nav className="flex items-center justify-between w-full h-full p-2 bg-yellow-400 rounded-b-md">
       <Link to="/">
         <div className="flex items-center gap-2 ">
           <img src={logo} alt="" className="w-[40px] rounded-md" />

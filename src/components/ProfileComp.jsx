@@ -1,22 +1,37 @@
 import React from "react";
 import userProfile from "../assets/userProfile.jpg";
+import cover from "../assets/cover.jpg";
 import { Link } from "react-router-dom";
 
 const ProfileComp = ({ open, setOpen }) => {
   const someId = 78;
   return (
-    <Link to={`/user/${someId}/profile`}>
-      <div className={`flex gap-2 p-1 items-center bg-gray-300 rounded-md mx`}>
-        <img
-          className="w-[50px] rounded-full border-2 border-white"
-          src={userProfile}
-          alt=""
-        />
-        <h3 className={`${!open && "scale-0"} duration-300 origin-left`}>
-          Saqlain Javed
-        </h3>
+    <div className="flex flex-col bg-white p-2 rounded-md">
+      <div className="relative w-full flex flex-col items-center justify-end">
+        <Link to={`/user/${someId}/profile`}>
+          <img src={cover} alt="" className="" />
+        </Link>
+        <div className="absolute -bottom-10">
+          <Link to={`/user/${someId}/profile`}>
+            <img
+              src={userProfile}
+              alt=""
+              className="shadow-md shadow-gray-400 border-2 border-white w-[6rem] rounded-full"
+            />
+          </Link>
+        </div>
       </div>
-    </Link>
+      <div className="mt-14 text-center">
+        <Link to={`/user/${someId}/profile`}>
+          <p className="font-bold text-[1.3rem]">Saqlain Javed</p>
+        </Link>
+        <p className="text-[1.2rem]">Mern Stack Developer</p>
+      </div>
+      <div className="hr-line">
+        <span className="line"></span>
+      </div>
+      <div></div>
+    </div>
   );
 };
 
