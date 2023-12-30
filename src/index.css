@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-gray-600;
+    @apply bg-gray-200;
   }
   a {
     @apply text-blue-600;
@@ -95,7 +95,4 @@ button.login-btn:hover {
   border-radius: 100%;
   background-color: gray;
   cursor: pointer;
-}
-
-.cover-pic {
 }
