@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "/pulsar-link-logo.png";
 import user from "../assets/user.png";
+import { CgProfile } from "react-icons/cg";
 
 import { Link } from "react-router-dom";
 const Navbar = ({ setLogin, login }) => {
@@ -27,10 +28,15 @@ const Navbar = ({ setLogin, login }) => {
       </div>
       <div className="flex items-center gap-2">
         <Link to={`/user/${someId}/profile`}>
-          <img src={user} alt="user icon" className="w-[30px]" />
+          {/* <img src={user} alt="user icon" className="w-[30px]" /> */}
+          <div className="text-2xl text-black">
+            <CgProfile />
+          </div>
         </Link>
         <Link to={`/user/${someId}/profile`}>Saqlain Javed</Link>
-        <button onClick={handleClick}>Logout</button>
+        <button className="" onClick={handleClick}>
+          Logout
+        </button>
       </div>
     </nav>
   );

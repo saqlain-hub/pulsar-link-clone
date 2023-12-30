@@ -8,9 +8,11 @@ const ProfileComp = ({ open, setOpen }) => {
   return (
     <div className="flex flex-col bg-white p-2 rounded-md">
       <div className="relative w-full flex flex-col items-center justify-end">
-        <Link to={`/user/${someId}/profile`}>
-          <img src={cover} alt="" className="" />
-        </Link>
+        <div className="w-full h-[10rem] overflow-hidden flex items-center">
+          <Link to={`/user/${someId}/profile`}>
+            <img src={cover} alt="" className="cover-pic" />
+          </Link>
+        </div>
         <div className="absolute -bottom-10">
           <Link to={`/user/${someId}/profile`}>
             <img
