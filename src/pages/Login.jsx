@@ -2,10 +2,15 @@ import React from "react";
 import logo from "../assets/logo.png";
 import socialConn from "../assets/login/social-connection.png";
 import { Link } from "react-router-dom";
-const Login = ({ setLogin, login }) => {
+import { useDispatch } from "react-redux";
+import { loginActions } from "../store/loginSlice";
+
+const Login = () => {
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLogin(!login);
+    dispatch(loginActions.login());
   };
   return (
     <div className="w-full h-screen flex justify-center items-center">

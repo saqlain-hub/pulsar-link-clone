@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Homepage from "./pages/Homepage";
 import Posts from "./pages/Posts";
 import Layout from "./pages/Layout";
@@ -8,20 +7,17 @@ import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import Inbox from "./pages/Inbox";
 import Login from "./pages/Login";
+import { useSelector } from "react-redux";
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
+  console.log(isLoggedIn);
   return (
     <>
       <Routes>
-        {!login && (
-          <Route
-            path="/"
-            element={<Login setLogin={setLogin} login={login} />}
-          />
-        )}
-        {login && (
-          <Route element={<Root setLogin={setLogin} login={login} />}>
+        {!isLoggedIn && <Route path="/" element={<Login />} />}
+        {isLoggedIn && (
+          <Route element={<Root />}>
             <Route element={<Layout />}>
               <Route path="/" element={<Homepage />} />
               <Route path="/posts" element={<Posts />} />

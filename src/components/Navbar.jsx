@@ -1,12 +1,15 @@
 import React from "react";
 import logo from "/pulsar-link-logo.png";
-import user from "../assets/user.png";
 import { CgProfile } from "react-icons/cg";
-
 import { Link } from "react-router-dom";
-const Navbar = ({ setLogin, login }) => {
+import { useDispatch } from "react-redux";
+import { loginActions } from "../store/loginSlice";
+
+const Navbar = () => {
+  const dispatch = useDispatch();
+
   const handleClick = () => {
-    setLogin(!login);
+    dispatch(loginActions.logout());
   };
   const someId = 78;
   return (
