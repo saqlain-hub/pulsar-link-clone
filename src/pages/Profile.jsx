@@ -6,6 +6,7 @@ const Profile = () => {
       <section>friendlist</section>
       <section>posts</section>
       <section>profile</section>
+      <section>trends</section>
     </div>
   );
 };
