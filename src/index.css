@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-gray-200;
-  }
   a {
     @apply text-blue-600;
   }
@@ -44,7 +41,7 @@
 .grid-container {
   display: grid;
   /* grid-template-columns: 20rem auto 20rem; */
-  gap: 4rem;
+  gap: 3rem;
 }
 
 @media (min-width: 1024px) {

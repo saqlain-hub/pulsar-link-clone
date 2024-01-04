@@ -1,5 +1,4 @@
-import React from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import socialConn from "../assets/login/social-connection.png";
 import { Link } from "react-router-dom";
@@ -8,7 +7,8 @@ import { loginActions } from "../store/loginSlice";
 import { CgProfile } from "react-icons/cg";
 
 const Login = () => {
-  let user;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -16,9 +16,9 @@ const Login = () => {
     dispatch(loginActions.login());
   };
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <div className="lg:flex items-center lg:justify-between justify-center w-full">
-        <div className="w-[40%] lg:w-[35%] ml-24 bg-slate-900 shadow-sm shadow-white rounded-md py-8">
+    <div className="flex items-center lg:h-screen py-8 lg:py-0 bg-slate-400">
+      <div className="flex items-center lg:justify-between justify-center w-full">
+        <div className="w-[400px] lg:h-[500px] ml-24 bg-slate-900 shadow-sm shadow-white rounded-md py-8">
           <div className="flex items-center justify-center">
             <CgProfile className="text-[4rem] text-white mb-8" />
           </div>
@@ -28,17 +28,21 @@ const Login = () => {
             className="flex gap-3 flex-col items-center justify-center"
           >
             <input
-              className="w-[70%] p-1 lg:p-2 rounded-md outline-none"
+              className="w-[70%] p-1 lg:p-2 rounded-md"
               type="text"
-              placeholder="username"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
-              className="w-[70%] p-1 lg:p-2 rounded-md outline-none"
+              className="w-[70%] p-1 lg:p-2 rounded-md"
               type="text"
-              placeholder="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
-            <button className="login-btn btn w-[30%] lg:w-[40%] p-1 lg:p-2 my-3 rounded-[25px] outline-none">
+            <button className="login-btn btn w-[30%] lg:w-[40%] p-1 lg:p-2 my-3 rounded-[25px]">
               Login
             </button>
             <div className="text-center">

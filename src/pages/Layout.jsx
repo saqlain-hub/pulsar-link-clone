@@ -6,9 +6,9 @@ import Trends from "../components/Trends";
 const Layout = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className=" h-full px-4">
+    <div className="bg-slate-800 h-full px-4">
       <div className="grid-container py-2">
-        <aside className="overflow-y-scroll hidden lg:h-[450px] xl:h-[570px]  2xl:h-screen 2xl:overflow-hidden px-2 lg:block sticky top-16 ">
+        <aside className="px-2 hidden lg:block sticky top-16 ">
           <ProfileComp />
           <Followers />
         </aside>
