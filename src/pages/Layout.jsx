@@ -6,7 +6,7 @@ import Trends from "../components/Trends";
 const Layout = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="container mx-auto h-full px-4">
+    <div className=" h-full px-4">
       <div className="grid-container py-2">
         <aside className="overflow-y-scroll hidden lg:h-[450px] xl:h-[570px]  2xl:h-screen 2xl:overflow-hidden px-2 lg:block sticky top-16 ">
           <ProfileComp />

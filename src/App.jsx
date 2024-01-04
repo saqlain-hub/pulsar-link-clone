@@ -8,14 +8,20 @@ import Profile from "./pages/Profile";
 import Inbox from "./pages/Inbox";
 import Login from "./pages/Login";
 import { useSelector } from "react-redux";
+import Register from "./pages/Register";
 
 function App() {
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
-  console.log(isLoggedIn);
+  // console.log(isLoggedIn);
   return (
     <>
       <Routes>
-        {!isLoggedIn && <Route path="/" element={<Login />} />}
+        {!isLoggedIn && (
+          <>
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </>
+        )}
         {isLoggedIn && (
           <Route element={<Root />}>
             <Route element={<Layout />}>
